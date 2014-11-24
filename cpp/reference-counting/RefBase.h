@@ -35,6 +35,6 @@ public:
 	}
 
 private:
-	long m_lRefCount;			//引用计数
-	CCriticalSection m_oLock;	//引用计数锁
+	long m_lRefCount;
+	CCriticalSection m_oLock;	
 };
