@@ -1,4 +1,4 @@
-Code4Read
+
 =========
 
-用来存放需要阅读或者用来展现给别人看的代码
+一个爬取[ZOL 摄影论坛美女写真区](http://dcbbs.zol.com.cn/jingxuan/178/)的 Python 爬虫
