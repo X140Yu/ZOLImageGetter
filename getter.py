@@ -2,15 +2,13 @@
 # coding:utf-8
 
 '''
-功能：获取http://dcbbs.zol.com.cn/jingxuan/178/1.html页面的极其子页面的所有图片
-使用：直接运行，最好把它放在一个单独的文件夹中
+功能：获取http://dcbbs.zol.com.cn/jingxuan/178/1.html页面的及其子页面的所有图片
+使用：直接运行，最好把本程序放在一个单独的文件夹中
 '''
 
 import os
 import re
-
 import urllib.request
-
 
 # 通过URL获得页面的HTML
 def getPageHTML(URL):
@@ -33,6 +31,7 @@ def getImageUsingHTML(HTML, pageNum, dirNum):
     for i in imglist:
         fileName = './%s/%s/%s.jpg' % (pageNum, dirNum, x)
         urllib.request.urlretrieve(i, fileName)
+        print ('Saving %s' % fileName)
         x += 1
 
 # 通过页面的所有子链接，获取图片
@@ -46,7 +45,7 @@ def getImageUsingUrlList(urlList, pageNum):
 
 # 遍历所有页面
 def downloadAll(URL):
-    for pageNum in range(1, 2):
+    for pageNum in range(1, 27):
         print('Getting Page %s' % pageNum)
         newURL = URL + '%s.html' % (pageNum)
         URLList = getUrlList(newURL)
