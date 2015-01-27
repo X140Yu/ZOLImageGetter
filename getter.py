@@ -1,11 +1,6 @@
 #!/usr/bin/python
 # coding:utf-8
 
-'''
-功能：获取http://dcbbs.zol.com.cn/jingxuan/178/1.html页面的及其子页面的所有图片
-使用：直接运行，最好把本程序放在一个单独的文件夹中
-'''
-
 import os
 import re
 import urllib.request
